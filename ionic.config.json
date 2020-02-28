@@ -1,0 +1,7 @@
+{
+  "name": "hackday",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
