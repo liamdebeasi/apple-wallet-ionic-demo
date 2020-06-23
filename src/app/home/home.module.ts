@@ -6,11 +6,14 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 
+import { CardGroupComponentModule } from '../components/card-group/card-group.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    CardGroupComponentModule,
     RouterModule.forChild([
       {
         path: '',

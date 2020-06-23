@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button class="done" (click)="dismiss()">Done</ion-button>
+    </ion-buttons>
+    
+    <div class="mini-card-wrapper trans-slow hidden" #miniCardEl>
+      <card [card]="getCard()"></card>
+    </div>
+    
+    <ion-buttons slot="end">
+      <ion-icon name="ellipsis-horizontal-circle-sharp" class="more"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" #content>
+  <div class="card-wrapper" #cardEl>
+    <card [card]="getCard()" (click)="dismiss()"></card>
+  </div>
+  
+  <div class="transactions-list">
+    <ion-list-header>
+      <ion-label>Latest Transactions</ion-label>
+    </ion-list-header>
+    <ion-list [inset]="true">
+      <ion-item *ngFor="let transaction of transactions">
+        <div class="float-left transaction-info">
+          <div class="vendor">{{ transaction.vendor }}</div>
+          <div class="location" *ngIf="transaction.location">{{ transaction.location }}</div>
+          <div class="date">{{ transaction.date }}</div>
+        </div>
+        
+        <div class="float-right transaction-detail">
+          <div class="price">{{ transaction.price }}</div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        
+        <div class="float-clear"></div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

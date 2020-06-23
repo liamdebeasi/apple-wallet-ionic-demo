@@ -1,8 +1,6 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "io.ionic.hackday",
   "appName": "hackday",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
   "webDir": "www",
-  "cordova": {}
+  "npmClient": "npm"
 }

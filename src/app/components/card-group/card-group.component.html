@@ -1,0 +1,1 @@
+<card *ngFor="let card of group.cards; let i = index" [card]="card" [style.top]="generateCardOffset(i)" (click)="openModal()"></card>

@@ -1,0 +1,38 @@
+ion-header ion-toolbar {
+  --border-width: 0px; 
+  --background: black;
+}
+
+ion-header .done {
+  font-weight: 600;
+  --color: white;
+  --opacity: 1;
+}
+
+ion-header .more {
+  font-size: 28px;
+}
+
+.scroll-container {
+  width: 100%;
+  
+  white-space: nowrap;
+  overflow-x: scroll;
+  
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-container card { 
+  position: relative;
+  
+  width: 100%;
+
+  display: inline-block;
+ 
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}

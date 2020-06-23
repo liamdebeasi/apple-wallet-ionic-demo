@@ -1,31 +1,73 @@
-#container {
-  text-align: center;
+ion-content {
+  --padding-top: calc(50px + var(--ion-safe-area-top));
+}
+
+.header {
+  position: relative;
+}
+
+.header .modal-close {
+  pointer-events: none;
 
   position: absolute;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  
+  transform-origin: top left;
+  opacity: 0;
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+  font-weight: 600;
   margin: 0;
+
+  --color: white;
 }
 
-#container a {
-  text-decoration: none;
+.header .modal-more {
+  pointer-events: none;
+  
+  position: absolute;
+  right: 0;
+  
+  transform-origin: top right;
+  opacity: 0;
+
+  font-size: 28px;
+  margin: 0;  
 }
 
-ion-content ion-toolbar {
-  --background: translucent;
+ion-title {
+  position: relative;
+  height: auto;
+  
+  padding: 0;
+  
+  width: 150px;
+  min-width: auto;
+  
+  transform-origin: top left;
+}
+
+.add-to-wallet {
+  font-size: 32px;
+
+  margin: 8px 0;
+  
+  transform-origin: top right;
+}
+
+.add-to-wallet:active {
+  opacity: 0.7;
+}
+
+.card-groups, .pass-groups {
+  position: relative;
+  
+  margin-top: 10px;
+
+  z-index: 1;
+}
+
+card-group {
+  width: 100%;
+
+  transform-origin: top;
 }

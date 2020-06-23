@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button class="done" (click)="dismiss()">Done</ion-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-icon name="ellipsis-horizontal-circle-sharp" class="more"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="scroll-container ion-padding">
+    
+    <!-- TODO: can we accomplish this spacing without style.left? -->
+    <card *ngFor="let card of group.cards; let i = index" [style.left]="i * 8 + 'px'" [card]="card" [mask]="false"></card>
+  </div>
+</ion-content>

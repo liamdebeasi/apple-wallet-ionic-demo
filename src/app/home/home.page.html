@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <div class="header">
+    <ion-title size="large" class="float-left">Wallet</ion-title>
+    
+    <!-- This is a placeholder element to help with the transition -->
+    <ion-button class="modal-close float-left" fill="clear">Done</ion-button>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-icon name="add-circle" slot="icon-only" class="float-right add-to-wallet trans"></ion-icon>
+    
+    <!-- This is a placeholder element to help with the transition -->
+    <ion-icon name="ellipsis-horizontal-circle-sharp" class="modal-more float-right"></ion-icon>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="float-clear"></div>
+  </div>
+
+  <div class="card-groups">
+    <card-group class="trans-slow ion-activatable" *ngFor="let cardGroup of cardGroups; let i = index" [group]="cardGroup" [style.top]="generateCardOffset(cardGroup, i)"></card-group>
   </div>
 </ion-content>

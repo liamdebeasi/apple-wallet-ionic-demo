@@ -24,3 +24,38 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-clear {
+  clear: both;
+}
+
+.trans {
+  transition: 0.2s all ease-in-out;
+}
+
+.trans-slow {
+  transition: 0.3s all ease-in-out;
+}
+
+ion-modal .modal-wrapper {
+  transform: unset !important;
+  background: transparent !important;
+}
+
+ion-modal.transaction-modal-hidden ion-header,
+ion-modal.transaction-modal-hidden ion-content card {
+  visibility: hidden;
+}
+
+ion-modal.transaction-modal-hidden ion-content {
+  --background: transparent;
+  pointer-events: none;
+}
