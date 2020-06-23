@@ -1,7 +1,7 @@
 import { AnimationController } from '@ionic/angular';
 
 /**
- * There is some pretty gnarly strings/math/values in this file.
+ * TODO: There is some pretty gnarly strings/math/values in this file.
  * It would be nice to find a way to better generalize it to
  * work with more screen sizes.
  */
@@ -52,8 +52,7 @@ const createRootAnimation = (baseEl: HTMLElement, presentingEl: HTMLElement, car
   let afterCards = [];
   
   /**
-   * If anyone wants a challenge, see if you can find
-   * a way to do this without using a loop!
+   * TODO: See if you can find a way to do this without using a loop!
    */
   allCards.forEach(card => {
     if (card === cardElement) {
